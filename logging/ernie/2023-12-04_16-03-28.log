@@ -1,0 +1,103 @@
+INFO: self config {
+  "aug_data_path": "../data/KUAKE/KUAKE-QQR_augment.csv",
+  "batch_size": 128,
+  "class_list": [
+    "0",
+    "1",
+    "2"
+  ],
+  "config_file": "../pretrain_models/ERNIE\\bert_config.json",
+  "data_augment": false,
+  "dev_num_examples": 0,
+  "dev_path": "../data/KUAKE/KUAKE-QQR_dev.json",
+  "device": "cuda",
+  "diff_learning_rate": false,
+  "early_stop": false,
+  "head_learning_rate": 0.001,
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "is_logging2file": true,
+  "learning_rate": 1e-05,
+  "logging_dir": "../logging/ernie",
+  "model_name_or_path": "../pretrain_models/ERNIE\\pytorch_model.bin",
+  "models_name": "ernie",
+  "multi_drop": 5,
+  "num_labels": 3,
+  "num_train_epochs": 10,
+  "pad_size": 64,
+  "pretrain_path": "../pretrain_models/ERNIE",
+  "require_improvement": 1000,
+  "requires_grad": true,
+  "save_file": "ernie",
+  "save_path": "../my_model",
+  "stop_word_valid": true,
+  "task": "KUAKE",
+  "test_num_examples": 0,
+  "test_path": "../data/KUAKE/KUAKE-QQR_test.json",
+  "tokenizer_file": "../pretrain_models/ERNIE\\vocab.txt",
+  "train_num_examples": 0,
+  "train_path": "../data/KUAKE/KUAKE-QQR_train.json",
+  "use_model": "bert",
+  "warmup_proportion": 0.1,
+  "weight_decay": 0.01
+}
+
+INFO: ***** Running training *****
+INFO:   Train Num examples = 15000
+INFO:   Dev Num examples = 1600
+INFO:   Num Epochs = 10
+INFO:   Instantaneous batch size GPU/CPU = 128
+INFO:   Total optimization steps = 1180
+INFO:   Train device:cuda
+INFO: Iter:   19/ 118,  epoch:    1/  10,  Train Loss: 0.645330,  Train Acc: 17.93%,  Val Loss: 0.637905,  Val Acc: 16.38%,  Time: 16.173115253448486 
+INFO: Iter:   39/ 118,  epoch:    1/  10,  Train Loss: 0.518371,  Train Acc: 23.20%,  Val Loss: 0.522169,  Val Acc: 16.88%,  Time: 31.98944664001465 
+INFO: Iter:   59/ 118,  epoch:    1/  10,  Train Loss: 0.431888,  Train Acc: 32.30%,  Val Loss: 0.410226,  Val Acc: 59.38%,  Time: 47.73915719985962 
+INFO: Iter:   79/ 118,  epoch:    1/  10,  Train Loss: 0.373672,  Train Acc: 53.09%,  Val Loss: 0.357345,  Val Acc: 62.94%,  Time: 63.24736738204956 
+INFO: Iter:   99/ 118,  epoch:    1/  10,  Train Loss: 0.368467,  Train Acc: 60.51%,  Val Loss: 0.332502,  Val Acc: 63.44%,  Time: 78.86103677749634 
+INFO: Iter:   19/ 118,  epoch:    2/  10,  Train Loss: 0.288976,  Train Acc: 66.93%,  Val Loss: 0.271062,  Val Acc: 76.12%,  Time: 105.78685235977173 
+INFO: Iter:   39/ 118,  epoch:    2/  10,  Train Loss: 0.261298,  Train Acc: 73.28%,  Val Loss: 0.252046,  Val Acc: 76.38%,  Time: 121.63717699050903 
+INFO: Iter:   59/ 118,  epoch:    2/  10,  Train Loss: 0.224343,  Train Acc: 76.52%,  Val Loss: 0.238059,  Val Acc: 78.44%,  Time: 137.2559266090393 
+INFO: Iter:   79/ 118,  epoch:    2/  10,  Train Loss: 0.194815,  Train Acc: 78.75%,  Val Loss: 0.234959,  Val Acc: 77.69%,  Time: 152.9548180103302 
+INFO: Iter:   99/ 118,  epoch:    2/  10,  Train Loss: 0.194540,  Train Acc: 80.00%,  Val Loss: 0.208319,  Val Acc: 81.06%,  Time: 169.35766911506653 
+INFO: Iter:   19/ 118,  epoch:    3/  10,  Train Loss: 0.176396,  Train Acc: 81.37%,  Val Loss: 0.204773,  Val Acc: 81.06%,  Time: 197.5668342113495 
+INFO: Iter:   39/ 118,  epoch:    3/  10,  Train Loss: 0.194400,  Train Acc: 83.32%,  Val Loss: 0.215412,  Val Acc: 79.44%,  Time: 215.46787071228027 
+INFO: Iter:   59/ 118,  epoch:    3/  10,  Train Loss: 0.193104,  Train Acc: 83.71%,  Val Loss: 0.216416,  Val Acc: 78.88%,  Time: 233.5502781867981 
+INFO: Iter:   79/ 118,  epoch:    3/  10,  Train Loss: 0.178021,  Train Acc: 83.36%,  Val Loss: 0.193598,  Val Acc: 82.12%,  Time: 251.63985967636108 
+INFO: Iter:   99/ 118,  epoch:    3/  10,  Train Loss: 0.179558,  Train Acc: 84.77%,  Val Loss: 0.197485,  Val Acc: 81.25%,  Time: 269.93802857398987 
+INFO: model saved, path: ../my_model\best_ernie.pkl
+INFO: Iter:   19/ 118,  epoch:    4/  10,  Train Loss: 0.095919,  Train Acc: 85.04%,  Val Loss: 0.194578,  Val Acc: 81.94%,  Time: 300.26243233680725 *
+INFO: Iter:   39/ 118,  epoch:    4/  10,  Train Loss: 0.172857,  Train Acc: 86.25%,  Val Loss: 0.201905,  Val Acc: 80.62%,  Time: 317.4050643444061 
+INFO: Iter:   59/ 118,  epoch:    4/  10,  Train Loss: 0.182301,  Train Acc: 85.47%,  Val Loss: 0.195358,  Val Acc: 81.31%,  Time: 335.10966515541077 
+INFO: Iter:   79/ 118,  epoch:    4/  10,  Train Loss: 0.100909,  Train Acc: 86.60%,  Val Loss: 0.199927,  Val Acc: 80.81%,  Time: 352.7037115097046 
+INFO: Iter:   99/ 118,  epoch:    4/  10,  Train Loss: 0.148240,  Train Acc: 86.25%,  Val Loss: 0.188914,  Val Acc: 81.75%,  Time: 370.26206064224243 
+INFO: model saved, path: ../my_model\best_ernie.pkl
+INFO: Iter:   19/ 118,  epoch:    5/  10,  Train Loss: 0.154596,  Train Acc: 86.93%,  Val Loss: 0.184756,  Val Acc: 82.88%,  Time: 400.4547338485718 *
+INFO: Iter:   39/ 118,  epoch:    5/  10,  Train Loss: 0.134435,  Train Acc: 87.27%,  Val Loss: 0.188822,  Val Acc: 82.88%,  Time: 418.28885984420776 
+INFO: Iter:   59/ 118,  epoch:    5/  10,  Train Loss: 0.098863,  Train Acc: 87.93%,  Val Loss: 0.190615,  Val Acc: 82.12%,  Time: 435.94134283065796 
+INFO: Iter:   79/ 118,  epoch:    5/  10,  Train Loss: 0.143036,  Train Acc: 88.01%,  Val Loss: 0.199221,  Val Acc: 80.81%,  Time: 453.93528008461 
+INFO: Iter:   99/ 118,  epoch:    5/  10,  Train Loss: 0.171680,  Train Acc: 86.99%,  Val Loss: 0.198835,  Val Acc: 80.12%,  Time: 471.7482030391693 
+INFO: Iter:   19/ 118,  epoch:    6/  10,  Train Loss: 0.124636,  Train Acc: 87.79%,  Val Loss: 0.199757,  Val Acc: 80.88%,  Time: 502.3923907279968 
+INFO: Iter:   39/ 118,  epoch:    6/  10,  Train Loss: 0.126535,  Train Acc: 88.52%,  Val Loss: 0.188167,  Val Acc: 82.31%,  Time: 520.3059639930725 
+INFO: Iter:   59/ 118,  epoch:    6/  10,  Train Loss: 0.130373,  Train Acc: 88.48%,  Val Loss: 0.191234,  Val Acc: 82.25%,  Time: 538.4886200428009 
+INFO: Iter:   79/ 118,  epoch:    6/  10,  Train Loss: 0.154711,  Train Acc: 87.42%,  Val Loss: 0.191961,  Val Acc: 82.19%,  Time: 556.5195233821869 
+INFO: Iter:   99/ 118,  epoch:    6/  10,  Train Loss: 0.125659,  Train Acc: 88.75%,  Val Loss: 0.197644,  Val Acc: 82.06%,  Time: 574.266587972641 
+INFO: Iter:   19/ 118,  epoch:    7/  10,  Train Loss: 0.103381,  Train Acc: 89.45%,  Val Loss: 0.200115,  Val Acc: 81.25%,  Time: 604.9048397541046 
+INFO: Iter:   39/ 118,  epoch:    7/  10,  Train Loss: 0.105825,  Train Acc: 89.45%,  Val Loss: 0.190133,  Val Acc: 82.19%,  Time: 624.2254853248596 
+INFO: Iter:   59/ 118,  epoch:    7/  10,  Train Loss: 0.111006,  Train Acc: 89.14%,  Val Loss: 0.192947,  Val Acc: 81.75%,  Time: 643.5588226318359 
+INFO: Iter:   79/ 118,  epoch:    7/  10,  Train Loss: 0.087754,  Train Acc: 89.14%,  Val Loss: 0.187666,  Val Acc: 82.50%,  Time: 661.765905380249 
+INFO: Iter:   99/ 118,  epoch:    7/  10,  Train Loss: 0.146531,  Train Acc: 89.34%,  Val Loss: 0.202582,  Val Acc: 81.44%,  Time: 680.2139420509338 
+INFO: Iter:   19/ 118,  epoch:    8/  10,  Train Loss: 0.114494,  Train Acc: 89.45%,  Val Loss: 0.194703,  Val Acc: 82.00%,  Time: 711.2440090179443 
+INFO: Iter:   39/ 118,  epoch:    8/  10,  Train Loss: 0.081790,  Train Acc: 89.34%,  Val Loss: 0.197478,  Val Acc: 81.50%,  Time: 729.1889522075653 
+INFO: Iter:   59/ 118,  epoch:    8/  10,  Train Loss: 0.088690,  Train Acc: 89.22%,  Val Loss: 0.192781,  Val Acc: 82.00%,  Time: 747.3359298706055 
+INFO: Iter:   79/ 118,  epoch:    8/  10,  Train Loss: 0.088083,  Train Acc: 89.84%,  Val Loss: 0.190635,  Val Acc: 82.25%,  Time: 765.2528595924377 
+INFO: Iter:   99/ 118,  epoch:    8/  10,  Train Loss: 0.121831,  Train Acc: 89.34%,  Val Loss: 0.195641,  Val Acc: 82.25%,  Time: 783.5648889541626 
+INFO: Iter:   19/ 118,  epoch:    9/  10,  Train Loss: 0.125904,  Train Acc: 89.66%,  Val Loss: 0.201390,  Val Acc: 81.19%,  Time: 814.9331095218658 
+INFO: Iter:   39/ 118,  epoch:    9/  10,  Train Loss: 0.141416,  Train Acc: 90.16%,  Val Loss: 0.191605,  Val Acc: 82.25%,  Time: 833.129412651062 
+INFO: Iter:   59/ 118,  epoch:    9/  10,  Train Loss: 0.133815,  Train Acc: 89.73%,  Val Loss: 0.192241,  Val Acc: 82.38%,  Time: 851.2061638832092 
+INFO: Iter:   79/ 118,  epoch:    9/  10,  Train Loss: 0.127754,  Train Acc: 88.91%,  Val Loss: 0.194237,  Val Acc: 82.12%,  Time: 869.3903713226318 
+INFO: Iter:   99/ 118,  epoch:    9/  10,  Train Loss: 0.118704,  Train Acc: 89.26%,  Val Loss: 0.193750,  Val Acc: 82.50%,  Time: 887.5045962333679 
+INFO: Iter:   19/ 118,  epoch:   10/  10,  Train Loss: 0.149861,  Train Acc: 89.94%,  Val Loss: 0.195128,  Val Acc: 82.31%,  Time: 918.3001470565796 
+INFO: Iter:   39/ 118,  epoch:   10/  10,  Train Loss: 0.143215,  Train Acc: 89.61%,  Val Loss: 0.196138,  Val Acc: 82.19%,  Time: 936.389885187149 
+INFO: Iter:   59/ 118,  epoch:   10/  10,  Train Loss: 0.114294,  Train Acc: 89.92%,  Val Loss: 0.194649,  Val Acc: 82.56%,  Time: 954.8153505325317 
+INFO: Iter:   79/ 118,  epoch:   10/  10,  Train Loss: 0.122458,  Train Acc: 89.96%,  Val Loss: 0.194251,  Val Acc: 82.44%,  Time: 972.9240250587463 
+INFO: Iter:   99/ 118,  epoch:   10/  10,  Train Loss: 0.100270,  Train Acc: 91.25%,  Val Loss: 0.195281,  Val Acc: 82.56%,  Time: 991.0618076324463 

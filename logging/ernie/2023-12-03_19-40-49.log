@@ -1,0 +1,51 @@
+INFO: self config {
+  "aug_data_path": "../data/KUAKE/KUAKE-QQR_augment.csv",
+  "batch_size": 128,
+  "class_list": [
+    "0",
+    "1",
+    "2"
+  ],
+  "config_file": "../pretrain_models/ERNIE\\bert_config.json",
+  "data_augment": false,
+  "dev_num_examples": 0,
+  "dev_path": "../data/KUAKE/KUAKE-QQR_dev.json",
+  "device": "cpu",
+  "diff_learning_rate": false,
+  "early_stop": false,
+  "head_learning_rate": 0.001,
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "is_logging2file": true,
+  "learning_rate": 1e-05,
+  "logging_dir": "../logging/ernie",
+  "model_name_or_path": "../pretrain_models/ERNIE\\pytorch_model.bin",
+  "models_name": "ernie",
+  "multi_drop": 5,
+  "num_labels": 3,
+  "num_train_epochs": 10,
+  "pad_size": 64,
+  "pretrain_path": "../pretrain_models/ERNIE",
+  "require_improvement": 1000,
+  "requires_grad": true,
+  "save_file": "ernie",
+  "save_path": "../my_model",
+  "stop_word_valid": true,
+  "task": "KUAKE",
+  "test_num_examples": 0,
+  "test_path": "../data/KUAKE/KUAKE-QQR_test.json",
+  "tokenizer_file": "../pretrain_models/ERNIE\\vocab.txt",
+  "train_num_examples": 0,
+  "train_path": "../data/KUAKE/KUAKE-QQR_train.json",
+  "use_model": "bert",
+  "warmup_proportion": 0.1,
+  "weight_decay": 0.01
+}
+
+INFO: ***** Running training *****
+INFO:   Train Num examples = 15000
+INFO:   Dev Num examples = 1600
+INFO:   Num Epochs = 10
+INFO:   Instantaneous batch size GPU/CPU = 128
+INFO:   Total optimization steps = 1180
+INFO:   Train device:cpu
